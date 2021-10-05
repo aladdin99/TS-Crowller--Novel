@@ -7,7 +7,7 @@ var path_1 = __importDefault(require("path"));
 var crowller_1 = __importDefault(require("../crowller"));
 var ShuqiService_1 = __importDefault(require("../service/ShuqiService"));
 /**
- * <p>标题: "书旗小说网" 网页爬取. </p>
+ * <p>标题: "书旗小说网" 网页爬取 </p>
  * <p>描述: </p>
  * <p>版权: Copyright (c) 2021</p>
  *

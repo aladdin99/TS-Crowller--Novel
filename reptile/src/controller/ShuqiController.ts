@@ -3,7 +3,7 @@ import ChapterList from "../crowller";
 import ShuqiService from "../service/ShuqiService";
 
 /**
- * <p>标题: "书旗小说网" 网页爬取. </p> 
+ * <p>标题: "书旗小说网" 网页爬取 </p> 
  * <p>描述: </p>
  * <p>版权: Copyright (c) 2021</p>
  *
