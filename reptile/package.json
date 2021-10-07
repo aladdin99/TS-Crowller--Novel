@@ -7,7 +7,7 @@
     "devx": "ts-node ./src/controller/ShuqiController.ts && ts-node ./src/controller/HimalayanController.ts",
     "dev:build": "tsc -w",
     "dev:start": "nodemon node ./build/controller/ShuqiController.js",
-    "dev": "concurrently npm:dev:*"
+    "dev": "tsc && concurrently npm:dev:*"
   },
   "nodemonConfig": {
     "ignore": [
