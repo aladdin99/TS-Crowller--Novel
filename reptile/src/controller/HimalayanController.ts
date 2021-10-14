@@ -1,5 +1,5 @@
 import PATH from "path";
-import ChapterList from "../crowller";
+import ChapterList from "../common/crowller";
 import HimalayanService from "../service/HimalayanService";
 
 /**

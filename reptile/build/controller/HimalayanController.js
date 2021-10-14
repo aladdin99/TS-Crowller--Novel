@@ -4,7 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var path_1 = __importDefault(require("path"));
-var crowller_1 = __importDefault(require("../crowller"));
+var crowller_1 = __importDefault(require("../common/crowller"));
 var HimalayanService_1 = __importDefault(require("../service/HimalayanService"));
 /**
  * <p>标题: "奇迹小说网" 网页爬取 </p>

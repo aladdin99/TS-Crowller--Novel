@@ -1,5 +1,5 @@
 import PATH from "path";
-import ChapterList from "../crowller";
+import ChapterList from "../common/crowller";
 import ShuqiService from "../service/ShuqiService";
 
 /**
@@ -12,30 +12,32 @@ import ShuqiService from "../service/ShuqiService";
  * @date 2021/10/15
  */
 
-// 内部节点逻辑操作（后续爬取其它网站在这里面补充）
-// 1、普通模式
-// let dealAnalyzer = new ShuqiService();
+export default function getShuQiList() {
+    // 内部节点逻辑操作（后续爬取其它网站在这里面补充）
+    // 1、普通模式
+    // let dealAnalyzer = new ShuqiService();
 
-// 2、单例模式
-let dealAnalyzer = ShuqiService.getInstance();
+    // 2、单例模式
+    let dealAnalyzer = ShuqiService.getInstance();
 
-// 爬取 "书旗小说网" 公共参数定义
-let URL_HEAD = "https://www.shuqi.com/"; // "书旗小说网" 公共地址.
-let JSON_PATH = PATH.join(__dirname,'../../data/书旗小说网/'); // "书旗小说网" JOSN 文件根路径
-
-
-
-/**
- * 1、爬取 "主编强推"目录
- * chapterListUrl：章节路径
- * chapterListFilePath：存放本地地址
- */
-let recommendUrl = URL_HEAD; // 后面追加动态 url 参数，在主页获取 href 的值。
-let recommendFilePath = JSON_PATH + "recommendList.json"; 
+    // 爬取 "书旗小说网" 公共参数定义
+    let URL_HEAD = "https://www.shuqi.com/"; // "书旗小说网" 公共地址.
+    let JSON_PATH = PATH.join(__dirname,'../../data/书旗小说网/'); // "书旗小说网" JOSN 文件根路径
 
 
-// 1、普通模式
-// new ChapterList(recommendUrl, recommendFilePath, dealAnalyzer.getRecommendList);
 
-// 2、单例模式
-new ChapterList(recommendUrl, recommendFilePath, dealAnalyzer);
+    /**
+     * 1、爬取 "主编强推"目录
+     * chapterListUrl：章节路径
+     * chapterListFilePath：存放本地地址
+     */
+    let recommendUrl = URL_HEAD; // 后面追加动态 url 参数，在主页获取 href 的值。
+    let recommendFilePath = JSON_PATH + "recommendList.json"; 
+
+
+    // 1、普通模式
+    // new ChapterList(recommendUrl, recommendFilePath, dealAnalyzer.getRecommendList);
+
+    // 2、单例模式
+    new ChapterList(recommendUrl, recommendFilePath, dealAnalyzer);
+}
